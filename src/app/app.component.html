@@ -9,6 +9,7 @@
         required
         [(ngModel)]="userData.name"
         [class.is-invalid]="name.invalid && name.touched"
+        [class.is-valid]="name.valid && name.touched"
         #name="ngModel"
         type="text"
         class="form-control"
@@ -22,6 +23,7 @@
         required
         [(ngModel)]="userData.email"
         [class.is-invalid]="email.invalid && email.touched"
+        [class.is-valid]="email.valid && email.touched"
         #email="ngModel"
         name="Email"
         type="email"
@@ -36,6 +38,7 @@
         [(ngModel)]="userData.phone"
         pattern="^\d{10}$"
         [class.is-invalid]="phone.invalid && phone.touched"
+        [class.is-valid]="phone.valid && phone.touched"
         #phone="ngModel"
         name="Phone"
         type="tel"
@@ -47,8 +50,8 @@
       <select
         required
         [(ngModel)]="userData.topic"
-        
         [class.is-invalid]="topic.invalid && topic.touched"
+        [class.is-valid]="topic.valid && topic.touched"
         #topic="ngModel"
         class="form-select mt-3"
         name="topic"
@@ -97,6 +100,7 @@
         required
         [(ngModel)]="userData.subscribe"
         [class.is-invalid]="subscribe.invalid && subscribe.touched"
+        [class.is-valid]="subscribe.valid && subscribe.touched"
         #subscribe="ngModel"
         type="checkbox"
         class="form-check-input"
