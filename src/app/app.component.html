@@ -7,7 +7,7 @@
       <label for="Name">Name</label>
       <input
         required
-        [(ngModel)]="name.value"
+        [(ngModel)]="userData.name"
         #name="ngModel"
         type="text"
         class="form-control"
@@ -19,7 +19,7 @@
       <label for="Email">Email</label>
       <input
         required
-        [(ngModel)]="email.value"
+        [(ngModel)]="userData.email"
         #email="ngModel"
         name="Email"
         type="email"
@@ -31,7 +31,7 @@
       <label for="Phone">Phone</label>
       <input
         required
-        [(ngModel)]="phone.value"
+        [(ngModel)]="userData.phone"
         #phone="ngModel"
         name="Phone"
         type="tel"
@@ -42,7 +42,7 @@
     <div class="form-group">
       <select
         required
-        [(ngModel)]="name.topic"
+        [(ngModel)]="userData.topic"
         #topic="ngModel"
         class="form-select mt-3"
         name="topic"
@@ -57,7 +57,7 @@
       <div class="form-check mt-2">
         <input
           required
-          [(ngModel)]="name.timePreference"
+          [(ngModel)]="userData.timePreference"
           #timePreference="ngModel"
           class="form-check-input"
           type="radio"
@@ -71,7 +71,7 @@
       <div class="form-check">
         <input
           required
-          [(ngModel)]="name.timePreference"
+          [(ngModel)]="userData.timePreference"
           #timePreference="ngModel"
           class="form-check-input"
           type="radio"
@@ -87,7 +87,7 @@
     <div class="form-check mb-3">
       <input
         required
-        [(ngModel)]="name.subscribe"
+        [(ngModel)]="userData.subscribe"
         #subscribe="ngModel"
         type="checkbox"
         class="form-check-input"
