@@ -1,0 +1,94 @@
+<div class="container-fluid">
+<h1>Student Enrollment Form</h1>
+
+<form #userForm="ngForm">
+  {{ userForm.value | json }}
+  <div class="form-group">
+    <label for="Name">Name</label>
+    <input
+      ngModel
+      #name="ngModel"
+      type="text"
+      class="form-control"
+      name="Name"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="Email">Email</label>
+    <input
+      ngModel
+      #email="ngModel"
+      name="Email"
+      type="email"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="Phone">Phone</label>
+    <input
+      ngModel
+      #phone="ngModel"
+      name="Phone"
+      type="tel"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <select ngModel #topic="ngModel" class="form-select mt-3" name="topic" >
+      <option value="">I'm interested in</option>
+      <option *ngFor="let topic of topics">{{ topic }}</option>
+    </select>
+  </div>
+
+  <div class="mt-3 mb-3">
+    <label>Time Preference</label>
+    <div class="form-check mt-2">
+      <input
+        ngModel
+        #timePreference="ngModel"
+        class="form-check-input"
+        type="radio"
+        name="timePreference"
+        value="morning"
+      />
+      <label class="form-check-label" for="timePreference">
+        Morning (9AM-12PM)
+      </label>
+    </div>
+    <div class="form-check">
+      <input
+        ngModel
+        #timePreference="ngModel"
+        class="form-check-input"
+        type="radio"
+        name="timePreference"
+        value="evening"
+      />
+      <label class="form-check-label" for="timePreference">
+        Evening (5PM-8PM)
+      </label>
+    </div>
+  </div>
+
+  <div class="form-check mb-3">
+    <input
+      ngModel
+      #subscribe="ngModel"
+      type="checkbox"
+      class="form-check-input"
+      name="subscribe"
+    />
+    <label for="offer" class="form-check-label"
+      >Send Me Promotional Offers</label
+    >
+  </div>
+
+  <button class="btn btn-primary mt-2" (click)="fun(userForm.value)">
+    Submit
+  </button>
+</form>
+</div>
+
