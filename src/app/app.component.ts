@@ -16,8 +16,8 @@ export class AppComponent {
     'pturuk123@gmail.com',
     '8018640492',
     '',
-    'morning',
-    true
+    '',
+    false
   );
 
   fun(data) {
