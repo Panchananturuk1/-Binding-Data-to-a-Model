@@ -6,7 +6,8 @@
   <div class="form-group">
     <label for="Name">Name</label>
     <input
-      ngModel
+      required
+      [(ngModel)]="name.value"
       #name="ngModel"
       type="text"
       class="form-control"
@@ -91,4 +92,6 @@
   </button>
 </form>
 </div>
+
+<u><i><h1>Property Binding</h1></i></u>
 
