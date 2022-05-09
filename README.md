@@ -2,7 +2,7 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-w2a8tf
 
-IT IS A TELPLATE DRIVEN FORM (TDF)
+IT IS A TEMPLATE DRIVEN FORM (TDF)
 
 Reference
 
