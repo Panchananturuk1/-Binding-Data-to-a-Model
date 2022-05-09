@@ -8,6 +8,7 @@
       <input
         required
         [(ngModel)]="userData.name"
+        [class.is-invalid]="name.invalid"
         #name="ngModel"
         type="text"
         class="form-control"
@@ -20,6 +21,7 @@
       <input
         required
         [(ngModel)]="userData.email"
+        [class.is-invalid]="email.invalid"
         #email="ngModel"
         name="Email"
         type="email"
@@ -32,6 +34,7 @@
       <input
         required
         [(ngModel)]="userData.phone"
+        [class.is-invalid]="phone.invalid"
         #phone="ngModel"
         name="Phone"
         type="tel"
@@ -43,6 +46,7 @@
       <select
         required
         [(ngModel)]="userData.topic"
+        [class.is-invalid]="topic.invalid"
         #topic="ngModel"
         class="form-select mt-3"
         name="topic"
@@ -58,6 +62,7 @@
         <input
           required
           [(ngModel)]="userData.timePreference"
+          [class.is-invalid]=""
           #timePreference="ngModel"
           class="form-check-input"
           type="radio"
@@ -72,6 +77,7 @@
         <input
           required
           [(ngModel)]="userData.timePreference"
+          [class.is-invalid]=""
           #timePreference="ngModel"
           class="form-check-input"
           type="radio"
@@ -88,6 +94,7 @@
       <input
         required
         [(ngModel)]="userData.subscribe"
+        [class.is-invalid]="subscribe.invalid"
         #subscribe="ngModel"
         type="checkbox"
         class="form-check-input"
