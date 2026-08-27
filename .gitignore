@@ -1,0 +1,6 @@
+/node_modules
+/dist
+/.angular
+.angular-cli-settings
+*.log
+.DS_Store

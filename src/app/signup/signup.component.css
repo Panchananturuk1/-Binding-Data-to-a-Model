@@ -80,6 +80,14 @@
   filter: brightness(1.05);
 }
 
+.success {
+  margin: 1rem 0 0;
+  text-align: center;
+  color: #1b7a3d;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
 .auth-footer {
   margin: 1.25rem 0 0;
   text-align: center;

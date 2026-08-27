@@ -10,13 +10,16 @@ import { LoginUser } from '../models/login-user';
 export class LoginComponent {
   userModel = new LoginUser();
   submitted = false;
+  successMessage = '';
 
   onSubmit(form: NgForm): void {
     this.submitted = true;
+    this.successMessage = '';
     if (form.invalid) {
       return;
     }
     console.log('Login model bound data:', this.userModel);
     console.log('Form value:', form.value);
+    this.successMessage = `Logged in as ${this.userModel.email}. Model bound successfully.`;
   }
 }

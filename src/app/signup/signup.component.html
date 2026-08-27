@@ -77,6 +77,8 @@
       <button type="submit" class="auth-btn">Signup</button>
     </form>
 
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+
     <p class="auth-footer">
       Already have account
       <a routerLink="/login">Login?</a>

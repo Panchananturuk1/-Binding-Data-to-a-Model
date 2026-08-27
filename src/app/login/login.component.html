@@ -41,6 +41,8 @@
       <button type="submit" class="auth-btn">Login</button>
     </form>
 
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+
     <p class="auth-footer">
       Forgot
       <a href="#" (click)="$event.preventDefault()">Password?</a>
