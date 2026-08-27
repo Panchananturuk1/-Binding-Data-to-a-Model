@@ -1,11 +1,20 @@
-# angular-ivy-w2a8tf
+# Binding Data to a Model
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-w2a8tf
+Angular **template-driven forms (TDF)** demo with two-way data binding (`[(ngModel)]`) to typed models.
 
-IT IS A TEMPLATE DRIVEN FORM (TDF)
+## Screens
 
-Reference
+- `/signup` — Signup form (Name, Email, Password, Contact)
+- `/login` — Login form (Email, Password)
+- `/enrollment` — Original student enrollment form
 
-CodeEvolution( Youtube ),
-StackOverflow,
-Google search
+Screen layout references are in `Screen Layouts/`.
+
+## Run
+
+```bash
+npm install
+npm start
+```
+
+Open http://localhost:4200

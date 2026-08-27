@@ -1,0 +1,112 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 45%, #38b6ff 100%);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2.75rem 2.5rem 2rem;
+  box-shadow: 0 18px 40px rgba(15, 40, 80, 0.18);
+}
+
+.auth-title {
+  margin: 0 0 2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.field {
+  margin-bottom: 1.35rem;
+}
+
+.field input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c9c9c9;
+  background: transparent;
+  padding: 0.55rem 0.1rem;
+  font-size: 1rem;
+  color: #222;
+  outline: none;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.field input::placeholder {
+  color: #9a9a9a;
+}
+
+.field input:focus {
+  border-bottom-color: #4a90e2;
+}
+
+.error {
+  display: block;
+  margin-top: 0.35rem;
+  color: #e53935;
+  font-size: 0.85rem;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.auth-btn {
+  width: 100%;
+  margin-top: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  padding: 0.85rem 1rem;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #5eb8ff 0%, #5b4fd6 55%, #6a3cc7 100%);
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.auth-btn:hover {
+  filter: brightness(1.05);
+}
+
+.success {
+  margin: 1rem 0 0;
+  text-align: center;
+  color: #1b7a3d;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.auth-footer {
+  margin: 1.1rem 0 0;
+  text-align: center;
+  color: #333;
+  font-size: 0.95rem;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.auth-footer.secondary {
+  margin-top: 0.45rem;
+}
+
+.auth-footer a {
+  color: #2f6feb;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.15rem;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,55 @@
+<div class="auth-page">
+  <div class="auth-card">
+    <h1 class="auth-title">Login</h1>
+
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" novalidate>
+      <div class="field">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          email
+          [(ngModel)]="userModel.email"
+          #email="ngModel"
+        />
+        <span
+          class="error"
+          *ngIf="email.invalid && (email.touched || submitted)"
+        >
+          email Required
+        </span>
+      </div>
+
+      <div class="field">
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          [(ngModel)]="userModel.password"
+          #password="ngModel"
+        />
+        <span
+          class="error"
+          *ngIf="password.invalid && (password.touched || submitted)"
+        >
+          Password Required
+        </span>
+      </div>
+
+      <button type="submit" class="auth-btn">Login</button>
+    </form>
+
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+
+    <p class="auth-footer">
+      Forgot
+      <a href="#" (click)="$event.preventDefault()">Password?</a>
+    </p>
+    <p class="auth-footer secondary">
+      Dont have account
+      <a routerLink="/signup">signup?</a>
+    </p>
+  </div>
+</div>

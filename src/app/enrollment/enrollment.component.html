@@ -1,0 +1,152 @@
+<div class="container-fluid enrollment">
+  <h1>Student Enrollment Form</h1>
+
+  <form #userForm="ngForm">
+    <pre class="model-preview">{{ userForm.value | json }}</pre>
+
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input
+        id="Name"
+        required
+        [(ngModel)]="userData.name"
+        [class.is-invalid]="name.invalid && name.touched"
+        [class.is-valid]="name.valid && name.touched"
+        #name="ngModel"
+        type="text"
+        class="form-control"
+        name="Name"
+      />
+      <span class="text-danger" *ngIf="name.invalid && name.touched"
+        >Name is Required</span
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input
+        id="Email"
+        required
+        email
+        [(ngModel)]="userData.email"
+        [class.is-invalid]="email.invalid && email.touched"
+        [class.is-valid]="email.valid && email.touched"
+        #email="ngModel"
+        name="Email"
+        type="email"
+        class="form-control"
+      />
+      <span class="text-danger" *ngIf="email.invalid && email.touched"
+        >Email is Required</span
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="Phone">Phone</label>
+      <input
+        id="Phone"
+        required
+        [(ngModel)]="userData.phone"
+        pattern="^\d{10}$"
+        [class.is-invalid]="phone.invalid && phone.touched"
+        [class.is-valid]="phone.valid && phone.touched"
+        #phone="ngModel"
+        name="Phone"
+        type="tel"
+        class="form-control"
+      />
+      <div *ngIf="phone.errors && phone.invalid && phone.touched">
+        <span class="text-danger" *ngIf="phone.errors['required']"
+          >Please enter phone number</span
+        >
+        <span class="text-danger" *ngIf="phone.errors['pattern']">
+          Number should be 10 digit</span
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="topic">Topic</label>
+      <select
+        id="topic"
+        required
+        [(ngModel)]="userData.topic"
+        [class.is-invalid]="topic.invalid && topic.touched"
+        [class.is-valid]="topic.valid && topic.touched"
+        #topic="ngModel"
+        class="form-select mt-3"
+        name="topic"
+      >
+        <option value="">I'm interested in</option>
+        <option *ngFor="let item of topics" [value]="item">{{ item }}</option>
+      </select>
+      <span class="text-danger" *ngIf="topic.invalid && topic.touched"
+        >Topic is Required</span
+      >
+    </div>
+
+    <div class="mt-3 mb-3">
+      <label>Time Preference</label>
+      <div class="form-check mt-2">
+        <input
+          required
+          [(ngModel)]="userData.timePreference"
+          #timePreference="ngModel"
+          class="form-check-input"
+          type="radio"
+          name="timePreference"
+          id="morning"
+          value="morning"
+        />
+        <label class="form-check-label" for="morning">
+          Morning (9AM-12PM)
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          required
+          [(ngModel)]="userData.timePreference"
+          class="form-check-input"
+          type="radio"
+          name="timePreference"
+          id="evening"
+          value="evening"
+        />
+        <label class="form-check-label" for="evening">
+          Evening (5PM-8PM)
+        </label>
+      </div>
+      <span
+        class="text-danger"
+        *ngIf="timePreference.invalid && timePreference.touched"
+        >Time preference is Required</span
+      >
+    </div>
+
+    <div class="form-check mb-3">
+      <input
+        [(ngModel)]="userData.subscribe"
+        #subscribe="ngModel"
+        type="checkbox"
+        class="form-check-input"
+        name="subscribe"
+        id="subscribe"
+      />
+      <label for="subscribe" class="form-check-label"
+        >Send Me Promotional Offers</label
+      >
+    </div>
+
+    <button
+      class="btn btn-primary mt-2"
+      type="button"
+      (click)="fun(userForm.value)"
+      [disabled]="userForm.invalid"
+    >
+      Submit
+    </button>
+  </form>
+
+  <h2 class="mt-4">Bound Model</h2>
+  <pre>{{ userData | json }}</pre>
+</div>
