@@ -1,0 +1,30 @@
+.enrollment {
+  max-width: 640px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.model-preview {
+  background: #f5f7fb;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.text-danger {
+  color: #e53935;
+  font-size: 0.85rem;
+}
+
+.is-invalid {
+  border-color: #e53935 !important;
+}
+
+.is-valid {
+  border-color: #2e7d32 !important;
+}

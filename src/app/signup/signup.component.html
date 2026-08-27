@@ -1,0 +1,85 @@
+<div class="auth-page">
+  <div class="auth-card">
+    <h1 class="auth-title">Signup</h1>
+
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)" novalidate>
+      <div class="field">
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+          [(ngModel)]="userModel.name"
+          #name="ngModel"
+        />
+        <span
+          class="error"
+          *ngIf="name.invalid && (name.touched || submitted)"
+        >
+          name Required
+        </span>
+      </div>
+
+      <div class="field">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          email
+          [(ngModel)]="userModel.email"
+          #email="ngModel"
+        />
+        <span
+          class="error"
+          *ngIf="email.invalid && (email.touched || submitted)"
+        >
+          email Required
+        </span>
+      </div>
+
+      <div class="field">
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          minlength="6"
+          [(ngModel)]="userModel.password"
+          #password="ngModel"
+        />
+        <span
+          class="error"
+          *ngIf="password.invalid && (password.touched || submitted)"
+        >
+          password Required
+        </span>
+      </div>
+
+      <div class="field">
+        <input
+          type="tel"
+          name="contact"
+          placeholder="Contact"
+          required
+          pattern="^\d{10}$"
+          [(ngModel)]="userModel.contact"
+          #contact="ngModel"
+        />
+        <span
+          class="error"
+          *ngIf="contact.invalid && (contact.touched || submitted)"
+        >
+          contact Required
+        </span>
+      </div>
+
+      <button type="submit" class="auth-btn">Signup</button>
+    </form>
+
+    <p class="auth-footer">
+      Already have account
+      <a routerLink="/login">Login?</a>
+    </p>
+  </div>
+</div>
